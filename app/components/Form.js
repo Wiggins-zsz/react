@@ -16,8 +16,11 @@ class Forms extends React.Component {
 		this.hanleChange = this.hanleChange.bind(this);
 		this.hanleChange2 = this.hanleChange2.bind(this);
 		this.handleSubmit = (event) => {
-			if(this.state.userName.trim()){
-				if(this.state.email.trim()){
+			const emailTest = /^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/;
+			const user = this.state.userName.trim().length;
+			if(user > 1 && user <= 5){
+				console.log(user)
+				if(emailTest.test(this.state.email)){
 					console.log(this.state.userName);
 					alert('Submit success: ' + 'name: ' + this.state.userName.trim() + 'emial: ' + this.state.email.trim());
 					event.preventDefault();
@@ -68,10 +71,10 @@ class Forms extends React.Component {
 					</label>
 					<input type="submit" value="submit" />
 					{
-						this.state.isError ? <p className="error-message">用户名不能为空</p> : null
+						this.state.isError ? <p className="error-message">用户名为空或者长度错误</p> : null
 					}
 					{
-						this.state.emailError ? <p className="error-message">邮箱不能为空</p> : null
+						this.state.emailError ? <p className="error-message">邮箱为空或者错误,请检查邮箱</p> : null
 					}
 				</form>
 			</div>
