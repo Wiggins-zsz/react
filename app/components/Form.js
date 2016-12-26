@@ -25,7 +25,6 @@ class Forms extends React.Component {
 					alert('Submit success: ' + 'name: ' + this.state.userName.trim() + 'emial: ' + this.state.email.trim());
 					event.preventDefault();
 				}else{
-
 					event.preventDefault();
 					this.setState({
 						emailError: true
