@@ -73,7 +73,7 @@ class Condition extends React.Component {
 						this.state.isShow ? <Hello click={this.handlePage} detail ="页面如下所示" />:<List click={this.handleList} detail="列表如下" />
 					}
 				</div>
-				<Indexs indexs={this.state.indexs} click={this.handleIndex} />
+				<Indexs indexs={this.state.indexs} click={this.handleIndex} />   
 			</div>
 		)
 	}
