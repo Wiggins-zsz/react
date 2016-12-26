@@ -25,7 +25,7 @@ class Indexs extends React.Component {
 	render() {
 		return (
 			<div>
-				<span onClick={this.props.click}>The index is:</span> 
+				<span onClick={this.props.click}>The index is(click counts):</span> 
 				<span className="indexs">
 					{this.props.indexs}
 				</span>

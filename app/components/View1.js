@@ -1,6 +1,7 @@
 import './View1.less';
 import Condition from './condition-render';
 import List from './List';
+import Forms from './Form';
 import React from 'react';
 
 class Greeting extends React.Component {
@@ -113,6 +114,8 @@ class View1 extends React.Component{
 	            <Tick  name = '闹钟名称'/>
 	            <Toggle />
 	            <Condition />
+	            <List />
+	            <Forms />
             </div>
         )
     }
