@@ -2,6 +2,7 @@ import './View1.less';
 import Condition from './condition-render';
 import List from './List';
 import Forms from './Form';
+import Lifting from './Lifting';
 import React from 'react';
 
 class Greeting extends React.Component {
@@ -116,6 +117,7 @@ class View1 extends React.Component{
 	            <Condition />
 	            <List />
 	            <Forms />
+	            <Lifting />
             </div>
         )
     }

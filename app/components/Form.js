@@ -39,6 +39,50 @@ class Textareas extends React.Component {
 	}
 }
 
+class Selected extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			value: '2'
+		}
+
+		this.handleChange = this.handleChange.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
+	}
+
+	handleSubmit(event) {
+		console.log(this.state.value);
+		event.preventDefault();
+	}
+
+	handleChange(event) {
+		this.setState({
+			value: event.target.value
+		})
+		console.log('now the value is : ' + event.target.value)
+	}
+
+	render() {
+		return (
+			<div className="selected">
+				<form onSubmit={this.handleSubmit}>
+					<label>
+						Pick your choose:
+						<select value={this.state.value} onChange={this.handleChange}>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select>
+					</label>
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
+		)
+	}
+}
+
+
 class Forms extends React.Component {
 	constructor(props) {
 		super(props);
@@ -113,6 +157,7 @@ class Forms extends React.Component {
 					}
 				</form>
 				<Textareas />
+				<Selected />
 			</div>
 		)
 	}
