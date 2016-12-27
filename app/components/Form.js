@@ -3,6 +3,42 @@ import ReactDom from 'react-dom';
 import './View1.less';
 import './Form.less';
 
+class Textareas extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			value: 'Please write an essay about you favorite Dom element'
+		};
+		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleChange = this.handleChange.bind(this);
+	}
+
+	handleSubmit(event) {
+		event.preventDefault();
+		alert('this textarea was submited' + this.state.value)
+	}
+
+	handleChange(event) {
+		this.setState({
+			value: event.target.value.toUpperCase()
+		})
+	}
+
+	render() {
+		return (
+			<div className="textarea">
+				<form onSubmit={this.handleSubmit}>
+					<label>
+						Name:
+						<textarea value={this.state.value} onChange={this.handleChange}></textarea>
+					</label>
+					<input type="submit" value="Submit" />
+				</form>
+			</div>
+		)
+	}
+}
+
 class Forms extends React.Component {
 	constructor(props) {
 		super(props);
@@ -43,14 +79,14 @@ class Forms extends React.Component {
 
 	hanleChange(event) {
 		this.setState({
-			userName: event.target.value,
+			userName: event.target.value.toUpperCase(),
 			isError: false
 		})
 	}
 
 	hanleChange2(event) {
 		this.setState({
-			email: event.target.value,
+			email: event.target.value.toUpperCase(),
 			emailError: false
 		})
 	}
@@ -76,6 +112,7 @@ class Forms extends React.Component {
 						this.state.emailError ? <p className="error-message">邮箱为空或者错误,请检查邮箱</p> : null
 					}
 				</form>
+				<Textareas />
 			</div>
 		)
 	}
