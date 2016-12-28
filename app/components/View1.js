@@ -3,6 +3,8 @@ import Condition from './condition-render';
 import List from './List';
 import Forms from './Form';
 import Lifting from './Lifting';
+import Composition from './Composition';
+import Summary from './Summary';
 import React from 'react';
 
 class Greeting extends React.Component {
@@ -118,6 +120,8 @@ class View1 extends React.Component{
 	            <List />
 	            <Forms />
 	            <Lifting />
+	            <Composition />
+	            <Summary />
             </div>
         )
     }
