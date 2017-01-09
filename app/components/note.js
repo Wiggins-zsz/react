@@ -65,3 +65,5 @@ fix problem above:
 		  const SpecificStory = components[props.storyType];
 		  return <SpecificStory story={props.story} />;
 		}
+
+5. 你可以用任何JavaScript expression 作为prop，用{}把它包起来;当statements 和 for loops不是javascript expression,不能直接使用它们作为props，可以赋值给变量，然后{变量}即可
