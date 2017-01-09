@@ -67,3 +67,25 @@ fix problem above:
 		}
 
 5. 你可以用任何JavaScript expression 作为prop，用{}把它包起来;当statements 和 for loops不是javascript expression,不能直接使用它们作为props，可以赋值给变量，然后{变量}即可
+	These two JSX expressions are equivalent:
+
+	<MyComponent message="hello world" /> ........1
+	<MyComponent message={'hello world'} />.......1
+
+	<MyComponent message="&lt;3" />...............2
+	<MyComponent message={'<3'} />................2
+
+	<MyTextBox autocomplete />....................3
+	<MyTextBox autocomplete={true} />.............3   the groups may conflict with  es6 object,in es6: {foo} is shot for {foo:foo}
+
+
+6. 如果props是一个对象，下面两种操作等价：
+	equivalent:
+		function App1() {
+		  return <Greeting firstName="Ben" lastName="Hector" />;
+		}
+
+		function App2() {
+		  const props = {firstName: 'Ben', lastName: 'Hector'};
+		  return <Greeting {...props} />;
+		}
