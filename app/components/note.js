@@ -81,6 +81,7 @@ fix problem above:
 
 6. 如果props是一个对象，下面两种操作等价：
 	equivalent:
+	
 		function App1() {
 		  return <Greeting firstName="Ben" lastName="Hector" />;
 		}
