@@ -6,6 +6,7 @@ import Lifting from './Lifting';
 import Composition from './Composition';
 import Summary from './Summary';
 import Jsx from './Jsx';
+import TypeChecking from './TypeChecking';
 import React from 'react';
 
 class Greeting extends React.Component {
@@ -124,6 +125,7 @@ class View1 extends React.Component{
 	            <Composition />
 	            <Summary />
 	            <Jsx />
+	            <TypeChecking />
             </div>
         )
     }
