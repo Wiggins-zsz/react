@@ -7,6 +7,7 @@ import Composition from './Composition';
 import Summary from './Summary';
 import Jsx from './Jsx';
 import TypeChecking from './TypeChecking';
+import Ref from './Ref';
 import React from 'react';
 
 class Greeting extends React.Component {
@@ -126,6 +127,7 @@ class View1 extends React.Component{
 	            <Summary />
 	            <Jsx />
 	            <TypeChecking />
+	            <Ref />
             </div>
         )
     }
