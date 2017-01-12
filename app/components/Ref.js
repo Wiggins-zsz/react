@@ -19,6 +19,7 @@ handleChange(event) {
             ref用在元素上引用元素的支撑实例(backing instance)，用在组件上引用组件的实例，
         */
         inputDOM.focus();
+        inputDOM.value = index + 'is selected';
     }
 }
 
