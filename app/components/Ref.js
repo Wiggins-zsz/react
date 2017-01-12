@@ -26,6 +26,7 @@ handleChange(event) {
   render() {
     // Use the `ref` callback to store a reference to the text input DOM
     // element in this.textInput.
+    //由于是uncontrolled组件，所以value设置的值不会更新，需要用defaultValue.Likewise, <input type="checkbox"> and <input type="radio"> support defaultChecked, and <select> supports defaultValue.
     var inputs = [];
     for(var i=1; i<=10; i++) {
       inputs.push(<div><li><input type="text" ref={"input" + i}/></li><br/></div>);
@@ -38,6 +39,8 @@ handleChange(event) {
         <ol>
           {inputs}
         </ol>
+        <label htmlFor="input2">测试default value</label>
+        <input type="text" id="input2" defaultValue="input" /> 
       </div>
     )
   }
