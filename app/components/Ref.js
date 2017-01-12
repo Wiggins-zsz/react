@@ -8,17 +8,19 @@ class Ref extends React.Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {  
-                var index = event.target.value; 
-                if(index >= 1 && index <= 10) {  
-                    //找到对应的输入框并将焦点设置到里面  
-                    var refName = "input" + index;  
-                    //var inputDOM = React.findDOMNode(this.refs[refName]);  
-                    var inputDOM = this.refs;
-                    console.log(inputDOM)
-                    //inputDOM.focus();  
-                }  
-            }
+handleChange(event) {  
+    var index = event.target.value; 
+    if(index >= 1 && index <= 10) {  
+        //找到对应的输入框并将焦点设置到里面  
+        var refName = "input" + index;  
+        var inputDOM = this.refs[refName];  
+        //note: react 15之后不支持 React.findDOMNode(this.refs[refName]);直接this.refs.refName即可
+        /*
+            ref用在元素上引用元素的支撑实例(backing instance)，用在组件上引用组件的实例，
+        */
+        inputDOM.focus();
+    }
+}
 
   render() {
     // Use the `ref` callback to store a reference to the text input DOM
