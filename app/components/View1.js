@@ -8,6 +8,7 @@ import Summary from './Summary';
 import Jsx from './Jsx';
 import TypeChecking from './TypeChecking';
 import Ref from './Ref';
+import Performance from './Performance';
 import React from 'react';
 
 class Greeting extends React.Component {
@@ -128,6 +129,7 @@ class View1 extends React.Component{
 	            <Jsx />
 	            <TypeChecking />
 	            <Ref />
+	            <Performance />
             </div>
         )
     }
