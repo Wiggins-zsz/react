@@ -9,6 +9,7 @@ import Jsx from './Jsx';
 import TypeChecking from './TypeChecking';
 import Ref from './Ref';
 import Performance from './Performance';
+import ReactWithoutEs6 from './ReactWithoutEs6';
 import React from 'react';
 
 class Greeting extends React.Component {
@@ -130,6 +131,7 @@ class View1 extends React.Component{
 	            <TypeChecking />
 	            <Ref />
 	            <Performance />
+	            <ReactWithoutEs6 />
             </div>
         )
     }
